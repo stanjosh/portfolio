@@ -4,84 +4,102 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./assets/style.css"
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./assets/style.css">
+
     <title>Joshua Stanford</title>
 </head>
 <body>
     
     <header>
+        <div class="header-wrapper">
+            <div class="title">
+                <h1 data-outline="Joshua Stanford">Joshua Stanford</h1>
+                <h2 class="sub-title">Full Stack Dev</h2>
+            </div>
 
-        <nav class="navigation">
-            <a href="#about" class="navbutton"><button name="about me">about me</button></a>
-            <a href="#projects" class="navbutton"><button name="projects">projects</button></a>
-            <a href="#contact"class="navbutton"><button name="contact">contact</button></a>
-        </nav>
-        <div class="title">
-            <h1>Joshua Stanford </h1>
-            <h2>Full Stack Learner</h2>
+            <nav>
+                <a href="#about"><button name="about me"><span data-button="about me">about me</span></button></a>
+                <a href="#projects"><button name="projects"><span data-button="projects">projects</span></button></a>
+                <a href="#contact"><button name="contact"><span data-button="contact">contact</span></button></a>       
+            </nav>
         </div>
     </header>
-
+    <main>
         <section id="about">
-        <div class="section">
-            <div class="sectiontitle">about me</div>
-            <div class="about">
+
+            <h2>about me</h2>
+            <div class="about section">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga maiores, itaque eveniet excepturi quaerat quisquam totam voluptate, quia omnis inventore obcaecati cumque voluptatum provident in dicta culpa. Non, qui vel!</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto nam sunt voluptates quaerat soluta atque nostrum. Itaque optio odio voluptatum eos ratione ut. Inventore provident ea, deleniti facere et eaque.</p>
             </div>
-        </div>
+
         </section>
 
         <section id="projects">
-        
-        <div class="section">    
-            <div class="sectiontitle">projects</div>
-            <div class="projects">
+            <h2>projects</h2>
+            <div class="projects section">
                 <div class="projectgrid">
-                    <div class="project" id="mainproject" style="background-image: url(./assets/images/0237.png)">
+                    <figure class="project" id="mainproject" style="background-image: url(./assets/images/0237.png)">
                         <a href="#" class="projectlink">
-                        <div class="projectcaption">important project</div>
+                        <h3 data-outline="important project">important project</h3>
                         </a>
-                    </div>
-                    <div class="project" style="background-image: url(./assets/images/0250.png)">
+                    </figure>
+                    <figure class="project" style="background-image: url(./assets/images/0250.png)">
                         <a href="#" class="projectlink">
-                        <div class="projectcaption">other project</div>
+                        <h3>other project</h3>
                         </a>
-                    </div>
-                    <div class="project" style="background-image: url(./assets/images/0237.png)">
+                    </figure>
+                    <figure class="project" style="background-image: url(./assets/images/0237.png)">
                         <a href="#" class="projectlink">
-                        <div class="projectcaption">other project</div>
+                        <h3>other project</h3>
                         </a>
-                    </div>
-                    <div class="project" style="background-image: url(./assets/images/0237.png)">
+                    </figure>
+                    <figure class="project" style="background-image: url(./assets/images/0237.png)">
                         <a href="#" class="projectlink">
-                        <div class="projectcaption">other project</div>
+                        <h3>other project</h3>
                         </a>
-                    </div>
-                    <div class="project" id="lastproject" style="background-image: url(./assets/images/0250.png)">
+                    </figure>
+                    <figure class="project" id="lastproject" style="background-image: url(./assets/images/0250.png)">
                         <a href="#" class="projectlink">
-                        <div class="projectcaption">main project</div>
+                        <h3 data-outline="main project">main project</h3>
                         </a>
-                    </div>
+                    </figure>
                 </div>
             </div>
-        </div>
+
         </section>
 
         <section id="contact">
-            
-            <div class="section">
-                <div class="sectiontitle">contact</div>
-                <div class="contact">
+            <h2>contact</h2>    
+            <div class="contact about section">
                 <p><a href="mailto:stanjosh@gmail.com">stanjosh@gmail.com</a></p>
 
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi id eveniet sequi? Pariatur neque asperiores, culpa perferendis nihil vero impedit blanditiis, quia itaque obcaecati iure possimus modi. Magni, maxime nostrum.</p>
-                </div>
             </div>
         </section>
+        </div>
     <footer>
         <p>barely any of this was copied.</p>
         <p>&copy; 2023 joshua stanford</p>
     </footer>
+    <video id="background-video" autoplay loop muted poster="./assets/images/background.png">
+        <source src="./assets/images/background.webm" type="video/mp4">
+    </video>
+    <svg class="offscreen" width="0" height="0" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <filter id="crispify">
+                <feComponentTransfer>
+                    <feFuncA type="discrete" tableValues="0 1"/>
+                </feComponentTransfer>
+                
+            </filter>
+            <filter id="outline">
+                <feMorphology operator="dilate" radius="2" />
+            </filter>
+        </defs>
+    </svg>
 </body>
 </html>
