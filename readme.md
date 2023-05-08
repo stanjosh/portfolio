@@ -15,7 +15,11 @@ Made in html and css, background made in blender. The background stops animating
 
 ![The layout of the page as of 5/7/2023](./portfolio/assets/images/screenshot-1.png)
 
+![The projects grid as of 5/7/2023](./portfolio/assets/images/projects.gif)
 
 
+## In action
+
+[here's the site deployed on github pages](https://stanjosh.github.io/portfolio/)
 
 
