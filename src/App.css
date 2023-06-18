@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;400;700;900&display=swap');
+
+:root {
+  --textcolor: #311847;
+  --headercolor: #67448b;
+  --accentcolor: #ff0072;
+  --backgroundcolor: #dbb8d0;
+  --outline-color: #471e3e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verh1dana, sans-serif;
+  box-sizing: border-box;
+  font-weight: 600;
+}
+
+html {
+  scroll-padding-top: 130px; /* height of sticky header */
+}
+
+body {
+  background-color: var(--backgroundcolor);
+  background: url(./public/assets/images/background.png);
+  color: var(--textcolor);
+  width: 100%;
+}
+
+a {
+  display: flex;
+  color: var(--textcolor);
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-decoration: none;
+  position: relative;
+}
+
+p {
+  line-height: 1.5;
+  text-indent: 2em;
+}
+
+h1,
+h2,
+h3 {
+  position: relative;
+  font-family: 'Titillium Web', sans-serif;
+  letter-spacing: 4px;
+}
+
+button {
+  border: none;
+  background: none;
+  flex: 1;
+  position: relative;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+  width: 100%;
+  display: flex;
+  width: 100%;
+  max-width: 790px;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  background-image: url(./public/assets/images/bar.png);
+  background-size: cover;
+  background-position: center;
+  border: 2px solid var(--accentcolor);
+  border-left: 22px solid var(--accentcolor);
+  margin-bottom: 50px;
+  margin-right: 0;
+  margin-left: auto;
+}
+
+
+.title h1 {
+  font-size: 4em;
+}
+
+
+
+nav {
+  display: flex;
+  flex: 1 0 500px;
+  justify-content: center;
+  
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  max-height: 45px;
+  right: 45px;
+  
+}
+
+nav button {
+  display: flex;
+  justify-content: center;
+  margin-left: 15px;
+  min-width: 125px;
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid var(--accentcolor);
+  border-bottom: none;
+  border-left: 6px solid var(--accentcolor);
+  height: 40px;
+  transition: all 0.1s ease-in;
+  font-size: large;
+}
+
+nav span {
+  z-index: 3;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+nav button:hover {
+  transition: all 0.1s ease-out;
+}
+
+nav a div {
+  position: absolute;
+  display: flex;
+  align-items: end;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 100%;
+  transition: all 0.4s ease-in;
+}
+
+nav a:hover div {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  background-color: var(--accentcolor);
+  transition: all 0.2s ease-in;
+}
+
+
+
+
+main {
+  display: flex;
+  margin-right: 25px;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: space-between;
+  width: 100%;
+  max-width: 900px;
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+  align-items: start;
+}
+
+.section {
+  backdrop-filter: blur(16px) grayscale(80%);
+  border: 2px solid var(--accentcolor);
+  border-left: 16px solid var(--accentcolor);
+  flex: 1 1 400px;
+  flex-wrap: wrap;
+}
+
+section h2 {
+  width: max-content;
+  position: relative;
+  display: flex;
+  flex: 0 1 225px;
+  font-weight: 700;
+}
+
+.about,
+.contact .projects {
+  padding: 25px;
+}
+
+
+.projectgrid {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 4px 4px 4px 0px;
+  min-height: 375px;
+}
+
+.project {
+  background-size: fill ;
+  background-attachment: static;
+  background-position: 0;
+  display: flex;
+  flex: 1 1;
+  margin: 4px;
+  border: 2px solid var(--accentcolor);
+  border-left: 6px solid var(--accentcolor);
+  filter: grayscale(20%);
+  transition: all 0.2s ease-in;
+}
+
+.project a {
+  display: flex;
+  min-width: 100%;
+  width: max-content;
+}
+
+.bg {
+
+  min-width: 100%;
+  width: 100%;
+  transition: all 0.2s ease-in;
+}
+
+.project:hover {
+
+  filter: grayscale(0%) saturate(110%);
+  transition: all 0.2s ease-out;
+  flex: 1 0 calc(100% / 4 - 18px);
+
+}
+
+.project h3 {
+  font-size: 1.5em;
+  font-weight: 600;
+  margin: 0;
+  text-align: center;
+  line-height: 1.5;
+}
+
+
+
+.contact {
+  font-size: 1.5em;
+  line-height: 3;
+    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.contact img {
+  width: 1.5em;
+  height: 1.5em;
+  filter: invert(15%) sepia(100%) saturate(3.5) hue-rotate(220deg); /* svg cannot be simply filled with hex here. a bunch of filters is the obvious solution */
+}
+
+footer {
+  margin-right: 25px;
+  margin-left: auto;
+  text-align: right;
+  font-size: small;
+}
+
+[data-outline] {
+  visibility: hidden;
+  padding-bottom: 5vh;
+}
+
+[data-outline]::before {
+  display: flex;
+  visibility: visible;
+  position: absolute;
+  justify-content: center;
+  content: attr(data-outline);
+  letter-spacing: 2px;
+  bottom: 0px;
+  left: 0px;
+  font-weight: 800;
+  color: var(--outline-color);
+  filter: url(#outline);; /* references the svg filter toward the bottom of the html, i put comments there */
+  z-index: 999;
+  padding: 5px;
+}
+
+[data-outline]:hover::before {
+  
+  color: var(--textcolor);
+  transition: all 0.3s ease-in;
+}
+
+[data-outline]::after {
+  font-weight: 800;
+  visibility: visible;
+  position: absolute;
+  content: attr(data-outline);
+  letter-spacing: 2px;
+  bottom: 0px;
+  left: 0px;
+  color: var(--accentcolor);
+  z-index: 999;
+  padding: 5px;
+}
+
+#background-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -3;
+}
+
+@media screen and (max-width: 980px) {
+  .projects figure {
+    filter: none;
+
+    flex: 1 0 250px;
+   }
+
+   .projects figure:hover {
+    flex: 1 0 250px;
+   }
+
+
+  header {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .title {
+    position: relative;
+    left: 0px;
+    top: -35px;
+  }
+}
+@media screen and (max-width: 750px) {
+  .title h2 {
+    display: none;
+  }
+
+  #background-video {
+    display: none;
+  }
+  
+}
+
+@media (prefers-reduced-motion) {
+  #background-video {
+    display: none;
+  }
+
+  span[data-button]:after {
+    display: none;
+  }
+
+
+}
