@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./assets/style.css">
+
+    <title>Joshua Stanford</title>
+</head>
+<body>
+    
+    <header>
+
+            <div class="title">
+                <h1 data-outline="Joshua Stanford">Joshua Stanford</h1>
+
+            </div>
+
+            <nav>
+                <a href="#about"><button name="about me"><span data-button="about me">about me</span></button></a>
+                <a href="#projects"><button name="projects"><span data-button="projects">projects</span></button></a>
+                <a href="#contact"><button name="contact"><span data-button="contact">contact</span></button></a>
+                <a href="#resume"><button name="resume"><span data-button="resume">resume</span></button></a>   
+            </nav>
+    </header>
+    
+    <main>    
+        <div class="bar"><h2>Full Stack Dev</h2></div>
+        <section id="about">
+
+            <h2>about me</h2>
+            <div class="about section">
+            <p>Well, I'm not a full stack developer yet. I've done some web design, some python, some blender. I am trying to create a focus here. I have full confidence in my ability to create, and my ability to solve problems and learn new things.</p>
+            <p>This text will definitely change over the next few months, but I'm ready to add more projects and ability to the stack.</p>
+            </div>
+
+        </section>
+
+        <section id="projects">
+            <h2>projects</h2>
+            <div class="projects section">
+                <div class="projectgrid">
+                    <figure class="project" style="background-image: url(./assets/images/planetoids.png)">
+                        <a href="#">
+                        <h3 data-outline="important project">important project</h3>
+                        </a>
+                    </figure>
+
+                    <figure class="project" style="background-image: url(./assets/images/console.png)">
+                        <a href="#">
+                        <h3>other project</h3>
+                        </a>
+                    </figure>
+                    <figure class="project" style="background-image: url(./assets/images/urbansurvivor.png)">
+                        <a href="#">
+                        <h3>other project</h3>
+                        </a>
+                    </figure>
+                    <figure class="project" style="background-image: url(./assets/images/city2.png)">
+                        <a href="#">
+                        <h3>other project</h3>
+                        </a>
+                    </figure>
+                    <figure class="project" style="background-image: url(./assets/images/0250.png)">
+                        <a href="#">
+                        <h3 data-outline="main project">main project</h3>
+                        </a>
+                    </figure>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="contact">
+            <h2>contact</h2>    
+            <div class="contact about section">
+                <p><a href="mailto:stanjosh@gmail.com" target="_blank"><img src="./assets/images/email.svg">stanjosh@gmail.com</a></p>
+
+                <p><a href="https://github.com/stanjosh" target="_blank"><img src="./assets/images/github.svg">my github</a></p>
+
+
+            </div>
+        </section>
+        </div>
+    <footer>
+        <p>&copy; 2023 joshua stanford</p>
+    </footer>
+    <video id="background-video" autoplay loop muted poster="./assets/images/background.png">
+        <source src="./assets/images/background.webm" type="video/mp4">
+    </video>
+    <svg class="offscreen" width="0" height="0" xmlns="http://www.w3.org/2000/svg"> <!-- this allows a little bit of xhtml, required to use the svg filters. -->
+        <defs>
+            <filter id="crisp">
+                <feComponentTransfer>
+                    <feFuncA type="discrete" tableValues="0 1"/> 
+                    <!-- this filter function maps the rgb values to either a 1 or a 0, basically removing antialias in this case-->
+                </feComponentTransfer>
+                
+            </filter>
+            <filter id="outline">
+                <feMorphology operator="dilate" radius="2" />
+                <!-- this filer essentially feathers/pixelates outwards. in this case using it as an outline for a duplicate element-->
+            </filter>
+        </defs>
+    </svg>
+</body>
+</html>
