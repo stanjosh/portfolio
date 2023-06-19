@@ -43,8 +43,8 @@ function App() {
         <section id="contact">
           <h2>contact</h2>    
           <div className="contact about section">
-              <p><a href="mailto:stanjosh@gmail.com" rel="noreferrer" target="_blank"><img src="public/assets/images/email.svg" />stanjosh@gmail.com</a></p>
-              <p><a href="https://github.com/stanjosh" rel="noreferrer" target="_blank"><img src="public/assets/images/github.svg" />my github</a></p>
+              <p><a href="mailto:stanjosh@gmail.com" rel="noreferrer" target="_blank"><img src="assets/images/email.svg" />stanjosh@gmail.com</a></p>
+              <p><a href="https://github.com/stanjosh" rel="noreferrer" target="_blank"><img src="assets/images/github.svg" />my github</a></p>
           </div>
         </section>
       </main>

@@ -27,6 +27,6 @@
         "name": "urban survivor",
         "url": "https://github.com/stanjosh/urban_survivor",
         "description": "first python project, using pygame library",
-        "image": "public/assets/images/repo/urbansurvivor.png"
+        "image": "assets/images/repo/urbansurvivor.png"
     }
 ]
