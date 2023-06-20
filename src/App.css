@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
 
 :root {
   --textcolor: #311847;
@@ -6,6 +6,7 @@
   --accentcolor: #ff0072;
   --backgroundcolor: #dbb8d0;
   --outline-color: #471e3e;
+  --nicefont: 'Didact Gothic', sans-serif;
 }
 
 * {
@@ -14,6 +15,8 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verh1dana, sans-serif;
   box-sizing: border-box;
   font-weight: 600;
+  max-width: 100%;
+  scroll-behavior:smooth;
 }
 
 html {
@@ -21,10 +24,11 @@ html {
 }
 
 body {
+
   background-color: var(--backgroundcolor);
   background: url(./assets/images/background.png);
   color: var(--textcolor);
-  width: 100%;
+
 }
 
 a {
@@ -45,7 +49,7 @@ h1,
 h2,
 h3 {
   position: relative;
-  font-family: 'Titillium Web', sans-serif;
+  font-family: var(--nicefont);
   letter-spacing: 4px;
 }
 
@@ -59,48 +63,50 @@ button {
 header {
   display: flex;
   flex-wrap: wrap;
-  justify-content: end;
   width: 100%;
-  display: flex;
-  width: 100%;
-  max-width: 790px;
-  justify-content: space-evenly;
-  align-items: flex-start;
+  max-width: 980px;
   background-image: url(./assets/images/bar.png);
   background-size: cover;
   background-position: center;
   border: 2px solid var(--accentcolor);
   border-left: 22px solid var(--accentcolor);
-  margin-bottom: 50px;
-  margin-right: 0;
+  margin-bottom: 1em;
+  margin-right: 25px;
   margin-left: auto;
+  justify-content: flex-end;
 }
 
-
-.title h1 {
+header h1 {
+  flex: 1 0 50%;
   font-size: 4em;
 }
-
+header h2 {
+  width: min-content;
+  font-size: 1em;
+  align-items: start;
+  text-align: left;
+  height: min-content;
+  flex: 1 1;
+}
 
 
 nav {
   display: flex;
-  flex: 1 0 500px;
-  justify-content: center;
-  
+  flex: 1 0 100%;
+  justify-content: flex-end;
   width: 100%;
   max-width: 600px;
-  height: 100%;
-  max-height: 45px;
-  right: 45px;
+
   
 }
 
 nav button {
+  align-items: center;
   display: flex;
+  flex: 1 0 100px;
   justify-content: center;
   margin-left: 15px;
-  min-width: 125px;
+  min-width: 115px;
   cursor: pointer;
   background-color: transparent;
   border: 2px solid var(--accentcolor);
@@ -113,7 +119,7 @@ nav button {
 
 nav span {
   z-index: 3;
-  font-family: 'Titillium Web', sans-serif;
+  font-family: var(--nicefont);
 }
 
 nav button:hover {
@@ -190,64 +196,101 @@ section h2 {
 .projectgrid {
   display: flex;
   flex-wrap: wrap;
-  padding: 4px 4px 4px 0px;
+  padding: 4px 4px 4px 4px;
   min-height: 375px;
 }
 
 .project {
-  background-size: fill ;
-  background-attachment: static;
-  background-position: 0;
   display: flex;
-  flex: 1 1;
   margin: 4px;
   border: 2px solid var(--accentcolor);
   border-left: 6px solid var(--accentcolor);
-  filter: grayscale(20%);
-  transition: all 0.2s ease-in;
+  flex: 1 0;
+  transition: all 0.3s ease-out;
+  transform-origin: 50%;
+
 }
 
 .project a {
   display: flex;
-  min-width: 100%;
-  width: max-content;
+  flex-grow: 1;
 }
 
-.bg {
-
-  min-width: 100%;
+.project a div {
+  background-size: fill ;
+  background-attachment: static;
+  background-position: 0;
   width: 100%;
-  transition: all 0.2s ease-in;
+  flex-grow: 1;
+  filter: grayscale(50%) blur(4px);
+}
+
+.project:hover a div{
+  width: 150px;
+  filter: saturate(110%);
 }
 
 .project:hover {
 
   filter: grayscale(0%) saturate(110%);
-  transition: all 0.2s ease-out;
-  flex: 1 0 calc(100% / 4 - 18px);
+  transition: all 0.1s ease-out;
+  flex: 1 0 40%
+}
 
+.project:hover h3{
+  font-size: 1.5em;
+  transition: all 0.1s ease-out;
+  transform: none;
+  transform-origin: 0 100%;
 }
 
 .project h3 {
-  font-size: 1.5em;
+  position: absolute;
+  font-size: 1em;
   font-weight: 600;
-  margin: 0;
-  text-align: center;
-  line-height: 1.5;
-}
-
-
+ 
+  transition: all 0.3s ease-out;
+  transform: rotate(-90deg) translate(-50%, 50%);
+  transform-origin: 0 100%;
+} 
 
 .contact {
-  font-size: 1.5em;
-  line-height: 3;
-    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 900px;
 }
 
-.contact img {
-  width: 1.5em;
-  height: 1.5em;
+.contactItem img {
+  position: relative;
+  right: 15%;
+  top: 0;
+  left: 0;
+  width: 4em;
+  height: 4em;
+  margin-right: 5px;
+  transform: rotate(-15deg);
   filter: invert(15%) sepia(100%) saturate(3.5) hue-rotate(220deg); /* svg cannot be simply filled with hex here. a bunch of filters is the obvious solution */
+}
+
+.contactItem:hover img {
+  transition: all 0.1s ease-out;
+  transform: none;
+  backdrop-filter: glow(0.5px);
+}
+
+.contactItem span{
+  display: inline-block;
+  font-size: 1.5em;
+  margin-left: 15px;
+}
+
+.contactItem {
+  display: flex;
+  flex: 1 0 100px;
+  align-items: center;
+  
 }
 
 footer {
@@ -269,13 +312,14 @@ footer {
   justify-content: center;
   content: attr(data-outline);
   letter-spacing: 2px;
-  bottom: 0px;
-  left: 0px;
+  top: 50%;
+  left: 50%;
   font-weight: 800;
+  width: max-content;
   color: var(--outline-color);
   filter: url(#outline);; /* references the svg filter toward the bottom of the html, i put comments there */
   z-index: 999;
-  padding: 5px;
+  transform: translate(-50%, -50%);
 }
 
 [data-outline]:hover::before {
@@ -286,15 +330,16 @@ footer {
 
 [data-outline]::after {
   font-weight: 800;
+  width: max-content;
   visibility: visible;
   position: absolute;
   content: attr(data-outline);
   letter-spacing: 2px;
-  bottom: 0px;
-  left: 0px;
+  top: 50%;
+  left: 50%;
   color: var(--accentcolor);
   z-index: 999;
-  padding: 5px;
+  transform: translate(-50%, -50%);
 }
 
 #background-video {
@@ -325,14 +370,37 @@ footer {
     display: flex;
     flex-wrap: wrap;
   }
-  .title {
-    position: relative;
-    left: 0px;
-    top: -35px;
+
+  [data-outline]::before {
+    display: none;
   }
+
+  [data-outline]::after {
+    display: none;
+  }
+
+  [data-outline] {
+    visibility: visible;
+    padding-bottom: 0;
+  }
+
+  header {
+    display: flex;
+
+    flex-wrap: wrap;
+    align-items: flex-end;
+    height: max-content
+  }
+
+  header h1 {
+    font-size: 3.25em;
+
+  }
+
 }
+
 @media screen and (max-width: 750px) {
-  .title h2 {
+  header h2 {
     display: none;
   }
 
@@ -340,7 +408,24 @@ footer {
     display: none;
   }
   
+  nav {
+    flex: 0 1;    
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: center;
+  }
+
+  
+  nav button {
+    
+    margin-right: 0;
+    margin-bottom: 5px;
+    border-right: none;
+    border-bottom: 2px solid var(--accentcolor);
+  }
 }
+
+
 
 @media (prefers-reduced-motion) {
   #background-video {

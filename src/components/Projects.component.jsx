@@ -1,19 +1,29 @@
-import projects from './db/projects.json';
+import projects from "./db/projects.json";
 
 const Projects = () => {
- 
-    return projects.map((item, key) => (
-
-    <div key={key} className="project" style={{backgroundImage: `url(${item.image})`}} >
-        <a href={item.url} target="_blank" rel="noreferrer">
-           <div className='fill'> <h3 data-outline={item.name}>{item.name}</h3></div>
-        </a>
-    </div>
-    ))
-}
-
-
-
-
+  return (
+    <section id="projects">
+      <h2>projects</h2>
+      <div className="projects section">
+        <div className="projectgrid">
+          {projects.sort(() => .5 - Math.random()).map((item, key) => (
+            <div
+              key={key}
+              className="project"
+              
+            >
+            <a href={item.url} target="_blank" rel="noreferrer">
+                <div className="fill" style={{ backgroundImage: `url(${item.image})` }}>
+                    
+                </div>
+                <h3 data-outline={item.name}>{item.name}</h3>
+            </a>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
 
 export default Projects;

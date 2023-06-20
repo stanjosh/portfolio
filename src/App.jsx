@@ -1,58 +1,28 @@
-import './App.css'
-import Projects from './components/Projects.component'
-
+import "./App.css";
+import Projects from "./components/Projects.component";
+import Contact from "./components/Contact.component";
+import Nav from "./components/Nav.component";
+import About from "./components/About.component";
 
 function App() {
   return (
     <>
-    <header>
-
-      <div className="bar">      
-      <div className="title">
-        <h1 data-outline="Joshua Stanford">Joshua&nbspStanford</h1>
+      <header>
+        <h1 data-outline="Joshua Stanford">Joshua Stanford</h1>
         <h2>Full Stack Dev</h2>
-      </div>
+        <Nav />
+      </header>
+      <main>
+        <About />
+        <Projects />
+        <Contact />
 
-      </div>
-      <nav>
-        <a href="#about"><button name="about me"><div></div><span data-outline="about me">about me</span></button></a>
-        <a href="#projects"><button name="projects"><div></div><span data-outline="projects">projects</span></button></a>
-        <a href="#contact"><button name="contact"><div></div><span data-outline="contact">contact</span></button></a>
-        <a href="#resume"><button name="resume"><div></div><span data-outline="resume">resume</span></button></a>   
-      </nav>
-    </header>
-    <main>    
-
-        <section id="about">
-          <h2>about me</h2>
-          <div className="about section">
-            <p>HTML CSS JavaScript React NGINX etc</p>
-            <p>Driven by solving problems, to the point of automating myself right out of the job sometimes.</p>
-          </div>
-        </section>
-
-        <section id="projects">
-            <h2>projects</h2>
-            <div className="projects section">
-              <div className="projectgrid">
-                <Projects />
-                
-              </div>
-            </div>
-        </section>
-        <section id="contact">
-          <h2>contact</h2>    
-          <div className="contact about section">
-              <p><a href="mailto:stanjosh@gmail.com" rel="noreferrer" target="_blank"><img src="assets/images/email.svg" />stanjosh@gmail.com</a></p>
-              <p><a href="https://github.com/stanjosh" rel="noreferrer" target="_blank"><img src="assets/images/github.svg" />my github</a></p>
-          </div>
-        </section>
       </main>
-    <footer>
-        <p>&copy; 2023 joshua stanford</p>
-    </footer>
+      <footer>
+        <p>&copy; 2023 stanj</p>
+      </footer>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
