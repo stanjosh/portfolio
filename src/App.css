@@ -371,18 +371,6 @@ footer {
     flex-wrap: wrap;
   }
 
-  [data-outline]::before {
-    display: none;
-  }
-
-  [data-outline]::after {
-    display: none;
-  }
-
-  [data-outline] {
-    visibility: visible;
-    padding-bottom: 0;
-  }
 
   header {
     display: flex;
@@ -393,11 +381,56 @@ footer {
   }
 
   header h1 {
-    font-size: 3.25em;
+    font-size: 1.75em;
 
   }
 
+.projectgrid {
+  flex-direction: column;
 }
+  .project {
+    display: flex;
+    margin: 4px;
+    border: 2px solid var(--accentcolor);
+    border-left: 6px solid var(--accentcolor);
+    transition: all 0.3s ease-out;
+    transform-origin: 50%;
+  
+  }
+  
+  .project a {
+    display: flex;
+    flex-grow: 1;
+  }
+  
+  .project a div {
+    background-size: fill ;
+    background-attachment: static;
+    background-position: 0;
+    width: 100%;
+    flex-grow: 1;
+    filter: grayscale(60%) blur(2px);
+  }
+  
+  
+  .project h3 {
+    position: absolute;
+    width: max-content;
+    font-size: 1.5em;
+    font-weight: 600;
+    left: 10%;
+    transform: none;
+    visibility: visible;
+    color: var(--accentcolor);
+  } 
+
+  .project h3[data-outline]::after, .project h3[data-outline]::before {
+    visibility: hidden;
+  }  
+
+
+  } 
+
 
 @media screen and (max-width: 750px) {
   header h2 {
