@@ -26,7 +26,7 @@ html {
 body {
 
   background-color: var(--backgroundcolor);
-  background: url(./assets/images/background.png);
+  background: url(assets/images/background.png);
   color: var(--textcolor);
 
 }
@@ -65,7 +65,7 @@ header {
   flex-wrap: wrap;
   width: 100%;
   max-width: 980px;
-  background-image: url(./assets/images/bar.png);
+  background-image: url(assets/images/bar.png);
   background-size: cover;
   background-position: center;
   border: 2px solid var(--accentcolor);

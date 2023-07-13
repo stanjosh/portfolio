@@ -6,9 +6,10 @@ const About = () => {
         <div className="about section">
           <p>HTML CSS JavaScript React NGINX Debian Python Flask etc</p>
           <p>
-            Driven by solving problems and automating solutions for the end
-            user and developers. And watching anime. And playing video games.
-            And sometimes making stupid little animations.{" "}
+          Tech enthusiast motivated by solving problems for developers, 
+          management, and end users. Strong experience with project management, 
+          team skills and written communication.{" "}
+          
           </p>
         </div>
       </section>

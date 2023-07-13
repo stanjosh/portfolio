@@ -1,21 +1,15 @@
 import "./App.css";
-import Projects from "./components/Projects.component";
-import Contact from "./components/Contact.component";
-import Nav from "./components/Nav.component";
-import About from "./components/About.component";
+import Header from "./components/Header.component";
+import { Outlet } from "react-router-dom";
+
 
 function App() {
   return (
     <>
-      <header>
-        <h1 data-outline="Joshua Stanford">Joshua Stanford</h1>
-        <h2>Full Stack Dev</h2>
-        <Nav />
-      </header>
+      <Header />
       <main>
-        <About />
-        <Projects />
-        <Contact />
+
+        <Outlet />
 
       </main>
       <footer>

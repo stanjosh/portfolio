@@ -1,4 +1,4 @@
-import projects from "./db/projects.json";
+import projects from "../db/projects.json";
 
 const Projects = () => {
   return (

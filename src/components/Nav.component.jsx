@@ -1,24 +1,22 @@
-const Nav = () =>{
+/* eslint-disable react/prop-types */
+
+
+
+
+const Nav = ({links}) => {
     return (
         <nav>
-        <a href="#about">
-        <button name="about me">
-            <div></div>
-            <span data-outline="about me">about me</span>
-        </button>
-        </a>
-        <a href="#projects">
-        <button name="projects">
-            <div></div>
-            <span data-outline="projects">projects</span>
-        </button>
-        </a>
-        <a href="#contact">
-        <button name="contact">
-            <div></div>
-            <span data-outline="contact">contact</span>
-        </button>
-        </a>
+
+           {links.map((item) => {
+                return (
+                <a key={item.text} href={item.link}>
+                    <button name={"btn-" + item.text}>
+                        <div></div>
+                        <span data-outline={item.text} >{item.text}</span>
+                    </button>
+                </a>
+                )
+           })}
         </nav>
     )
 }
